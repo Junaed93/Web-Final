@@ -27,19 +27,27 @@
 </html>
 
 <?php
-    if(isset($_POST["submit"])){
-        $attendees = intval($_POST["attendees"]);
-        $cost = intval($_POST["costPP"]);
-        $capacity = intval($_POST["capacity"]);
 
-        $veneue = $attendees / $capacity;
-        $totalvenue = ceil($veneue);
-        $emptySeat = ($totalvenue * $capacity) - $attendees;
-        $wastedMoney = $emptySeat * $cost;
+function calculateVenueWaste($attendees, $capacity, $cost) {
 
-        echo "<br>";
-        echo "<table border = '1'>";
-        echo "<tr><td>Total Venue</td><td>Empty Seats</td><td>Wasted Money</td></tr>";
-        echo "<tr><td>$totalvenue</td><td>$emptySeat</td><td>$wastedMoney</td></tr>";
-    }
+    $venue = $attendees / $capacity;
+    $totalVenue = ceil($venue);
+    $emptySeat = ($totalVenue * $capacity) - $attendees;
+    $wastedMoney = $emptySeat * $cost;
+
+    echo "<br>";
+    echo "<table border='1'>";
+    echo "<tr><td>Total Venue</td><td>Empty Seats</td><td>Wasted Money</td></tr>";
+    echo "<tr><td>$totalVenue</td><td>$emptySeat</td><td>$wastedMoney</td></tr>";
+    echo "</table>";
+}
+
+if (isset($_POST["submit"])) {
+
+    $attendees = intval($_POST["attendees"]);
+    $cost = intval($_POST["costPP"]);
+    $capacity = intval($_POST["capacity"]);
+
+    calculateVenueWaste($attendees, $capacity, $cost);
+}
 ?>

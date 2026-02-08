@@ -26,23 +26,29 @@
 </html>
 
 <?php
-    if(isset($_POST['submit'])){
-    $numPizza = intval($_POST['numPizza']);
-    $slicePerStudent = intval($_POST['slicePerStudent']);
-    $totalSlice = intval($_POST['totalSlice']);
+
+function calculatePizza($numPizza, $slicePerStudent, $totalSlice) {
+
     $pizzaPrice = 1050;
-    
-    $Pizza = $numPizza * $slicePerStudent / $totalSlice;
-    $totalPizza = ceil($Pizza);
-    $leftSlice = $totalPizza * $totalSlice - ($numPizza * $slicePerStudent);
+
+    $totalPizza = ceil($numPizza * $slicePerStudent / $totalSlice);
+    $leftSlice = ($totalPizza * $totalSlice) - ($numPizza * $slicePerStudent);
     $waste = ($leftSlice / $totalSlice) * $pizzaPrice;
 
     echo "<br>";
     echo "<h2>Result:</h2><br>";
     echo "<table border='1'>";
-    echo "<tr><th>Total Pizza</th><th>LeftOver Slice</th><th>Wasted Money(BDT)</th></tr>";
+    echo "<tr><th>Total Pizza</th><th>LeftOver Slice</th><th>Wasted Money (BDT)</th></tr>";
     echo "<tr><td>$totalPizza</td><td>$leftSlice</td><td>$waste</td></tr>";
     echo "</table>";
-    
-    }
+}
+
+if (isset($_POST['submit'])) {
+
+    $numPizza = intval($_POST['numPizza']);
+    $slicePerStudent = intval($_POST['slicePerStudent']);
+    $totalSlice = intval($_POST['totalSlice']);
+
+    calculatePizza($numPizza, $slicePerStudent, $totalSlice);
+}
 ?>
