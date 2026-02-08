@@ -1,4 +1,4 @@
-# 🌐 Web Programming Final Assignments
+# 🌐 Web Programming Final Solve
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
@@ -6,7 +6,7 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white)
 
-A comprehensive collection of web development projects and lab solutions for academic courses **243**, **251**, and **252**. These projects showcase various web technologies and database management techniques.
+Solve for UIU Web Programming Final **243**, **251**, and **252**.
 
 ---
 
@@ -23,8 +23,8 @@ The repository is organized by course codes and question numbers:
 ## 🛠️ Requirements
 
 * **XAMPP** (or any local server with Apache and MySQL support).
-* **PHP 7.4+**
-* **MySQL/MariaDB** (Required for course 252).
+* **PHP 8.+**
+* **MySQL**
 
 ---
 
@@ -63,10 +63,3 @@ Navigate to the projects in your web browser:
 
 ---
 
-## 📝 Author
-
-**Junaed Khandakar**
-
----
-
-This project is for academic purposes.
